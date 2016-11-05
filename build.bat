@@ -1,0 +1,1 @@
+coffee -c mp3_reader.coffee && coffee -c mp3_client.coffee
