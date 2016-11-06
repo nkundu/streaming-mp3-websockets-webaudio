@@ -4,8 +4,8 @@
 #Written by Kristian Evensen <kristian.evensen@gmail.com>
 
 #Insert server IP!
-client = new BinaryClient 'ws://<insert server ip>:9696'
-context = new webkitAudioContext()
+client = new BinaryClient 'ws://localhost:9696'
+context = new AudioContext()
 arr = []
 nextStartTime = 0
 numSegments = 0
@@ -30,8 +30,8 @@ streamDone = ->
     console.log "Received all MP3 fragments from server"
 
 playAudio = (buffer) ->
-    #console.log "Decoding successful"
-    #console.log buffer.duration
+    console.log "Decoding successful"
+    console.log buffer.duration
 
     #Create the source buffer, connect it to the final destination and tell it
     #when to start playing. Look at

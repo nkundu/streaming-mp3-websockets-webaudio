@@ -36,11 +36,12 @@
 
   playAudio = function(buffer) {
     var source;
-    //source = context.createBufferSource();
-    //source.buffer = buffer;
-    //source.connect(context.destination);
-    //source.start(nextStartTime);
-    console.log(nextStartTime);
+    console.log("Decoding successful");
+    console.log(buffer.duration);
+    source = context.createBufferSource();
+    source.buffer = buffer;
+    source.connect(context.destination);
+    source.start(nextStartTime);
     if (nextStartTime === 0) {
       return nextStartTime = context.currentTime;
     } else {
